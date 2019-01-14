@@ -11,7 +11,7 @@ var ballDOMElement = document.querySelector("#ball")
 var intervalID
 
 function manageBallAnimation () {
-    ballDOMElement.style.left = `${posX++}px`
+    ballDOMElement.style.left = `${posX++}px`;
 
     if (degrees > 360)  degrees = 0
     ballDOMElement.style.transform = `rotate(${(degrees+=.5)}deg)`

@@ -1,9 +1,3 @@
-// setInterval
-// clearInterval
-
-// setTimeout
-// clearTimeout
-
 var posX = 0;
 var degrees = 0;
 var maxExecutions = 20 * 3
@@ -22,10 +16,18 @@ function manageBallAnimation () {
     // } 
 }
 
+function hideBall() {
+    ballDOMElement.style.display = `none`
+}
+
 document.querySelector("#stop").onclick = function () {
     clearInterval(intervalID);
 }
 document.querySelector("#play").onclick = function () {
     intervalID = setInterval(manageBallAnimation, 20) //ms!
+}
+
+document.querySelector("#hide").onclick = function () {
+    setTimeout(hideBall, +document.querySelector("#timeValue").value)
 }
 
